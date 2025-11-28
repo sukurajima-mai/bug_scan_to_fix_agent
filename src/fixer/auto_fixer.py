@@ -58,7 +58,6 @@ class AutoFixer:
 
     def _call_llm(self, prompt: str) -> str:
         session = requests.Session()
-        """调用 Groq/LLM API（增加了超时 + 重试 + 退避，但主流程不变）"""
         api_url = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {self.api_key}",

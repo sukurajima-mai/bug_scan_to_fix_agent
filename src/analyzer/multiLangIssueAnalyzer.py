@@ -332,9 +332,3 @@ class MultiLangIssueAnalyzer:
         #         continue
         
         # return "Failed to analyze after retries"
-
-    def get_ai_api_key(self) -> str:
-        """获取 API 密钥"""
-        # 在实际应用中可以通过环境变量或配置文件获取 API 密钥
-        return "sk-5e43c35e3fd2446d9dbf031af4166d46"  # 使用提供的 API 密钥
-
