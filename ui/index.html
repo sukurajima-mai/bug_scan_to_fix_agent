@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<title>AI Bug Agent v2.7 - Report</title>
+<style>
+body{font-family:system-ui,Segoe UI,Arial;margin:24px;background:#0b1220;color:#e6edf3}
+h1{color:#91e3a2}
+.card{background:#111827;border-radius:16px;padding:16px;margin:12px 0;border:1px solid #202a3b}
+pre{white-space:pre-wrap;background:#0d1322;padding:12px;border-radius:12px}
+button{padding:6px 12px;border-radius:10px;border:1px solid #274c77;background:#1b263b;color:#fff;cursor:pointer}
+</style>
+</head>
+<body>
+<h1>AI Bug Agent v2.7 Report</h1>
+<p>Load <code>bug_fix_report.json</code> from your target project folder to view details.</p>
+<input type="file" id="file" accept=".json"/>
+<div id="list"></div>
+<script>
+document.getElementById('file').addEventListener('change', async (e)=>{
+  const f = e.target.files[0];
+  const text = await f.text();
+  const data = JSON.parse(text);
+  const box = document.getElementById('list');
+  box.innerHTML = '<pre>'+JSON.stringify(data,null,2)+'</pre>';
+});
+</script>
+</body>
+</html>

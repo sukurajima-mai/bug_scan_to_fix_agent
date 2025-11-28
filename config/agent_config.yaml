@@ -1,0 +1,19 @@
+engine:
+  max_iterations: 3
+  log_level: "INFO"
+
+scanner:
+  include:
+    - "**/*.py"
+    - "**/*.ts"
+    - "**/*.tsx"
+    - "**/*.js"
+  exclude:
+    - "**/node_modules/**"
+    - "**/.venv/**"
+    - "**/dist/**"
+    - "**/build/**"
+
+report:
+  filename_txt: "bug_fix_report.txt"
+  filename_json: "bug_fix_report.json"
